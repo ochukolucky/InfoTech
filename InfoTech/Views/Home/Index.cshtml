@@ -1,0 +1,68 @@
+﻿@model InfoTech.UserAccount
+@{
+
+    ViewBag.Title = "Login form";
+
+}
+
+@using (Html.BeginForm("Index", "Home"))
+
+{
+
+    <span style="font-weight:bolder; font-size:16px; color:red;">@ViewBag.Message</span>
+
+    <div>
+
+        <h4>Welcome To Infotech</h4>
+        <h2>Login</h2>
+
+        <div class="row">
+
+            <div class="form-group col-6">
+
+                <lable for="loginid">Username</lable>
+
+                @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
+
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="form-group col-6">
+
+                <lable for="loginid">Password</lable>
+
+                @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+
+            </div>
+
+        </div>
+        <br>
+
+        <div class="row">
+
+            <div class="form-group col-12">
+
+                 <input type="submit" value="Submit" class="btn btn-secondary" />
+
+            </div>
+
+        </div>
+
+    </div>
+    <br />
+    <div class="row">
+
+        <div class="form-group col-12">
+
+            <a href="/Home/SignUp">SignUp</a>
+
+        </div>
+
+    </div>
+
+}
+
+ 
